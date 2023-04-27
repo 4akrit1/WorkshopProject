@@ -8,8 +8,10 @@ public function index(){
     $db= Database::connect();
     $query=$db->query("select * from user");
     $studentList = $query->getResultArray();
-    return View('student/index', ['data'=>$studentList]);
+    return View('student/index',['data'=>$studentList]);
 }
+
+
 
 public function new(){
     // if(!$this->request->is('post'))
